@@ -5,9 +5,12 @@ import CaughtPokemon from "./components/CaughtPokemon";
 import Logo from "./components/Logo";
 
 function App() {
+  const logWhenClicked = () => {
+    console.log("THE LOGO CLICKED...");
+  };
   return (
     <div>
-      <Logo appName="Pokedex" />
+      <Logo appName="Pokedex" handleClick={logWhenClicked} />
       <BestPokemon
         abilities={["Anticipation", "Adaptability", "Run-Away", "new ability"]}
       />
@@ -15,5 +18,4 @@ function App() {
     </div>
   );
 }
-
 export default App;
