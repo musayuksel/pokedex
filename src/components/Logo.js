@@ -17,7 +17,19 @@ export default function Logo({ appName, handleClick }) {
           onClick={changeIsShow}
           style={{ cursor: "pointer" }}
         />
-      ) : null}
+      ) : (
+        <button
+          onClick={changeIsShow}
+          style={{
+            backgroundColor: "orange",
+            border: "none",
+            padding: "1rem",
+            cursor: "pointer",
+          }}
+        >
+          RETURN
+        </button>
+      )}
     </header>
   );
 }
