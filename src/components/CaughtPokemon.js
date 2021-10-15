@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import PokemonMoves from "./PokemonMoves";
 export default function CaughtPokemon(props) {
   // const [caught, setCaught] = useState(0);
   // const catchPokemon = () => setCaught((count) => count + 1);
@@ -15,6 +16,7 @@ export default function CaughtPokemon(props) {
   ));
   return (
     <>
+      <PokemonMoves />
       <p>
         Caught {caught.length} Pokemon on {props.date}
       </p>
