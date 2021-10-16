@@ -1,17 +1,19 @@
+/*eslint-disable */
 import React, { useState, useEffect } from "react";
 
 export default function PokemonMoves({ pokemonId }) {
   const [pokemonData, setPokemonData] = useState(null);
   useEffect(() => {
     async function fetchData() {
-      const r = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonId}/`);
+      const r = await fetch(
+        `https://pokeapi.co/api/v2/pokemon/${pokemonId}/`
+      );
       const data = await r.json();
       console.log(data);
       setPokemonData(data);
     }
     fetchData();
   }, [pokemonId]);
-
   return (
     <div>
       {pokemonData ? (

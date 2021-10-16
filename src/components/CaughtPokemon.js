@@ -1,27 +1,45 @@
+/*eslint-disable */
 import React, { useState } from "react";
-// import PokemonMoves from "./PokemonMoves";
-import PokemonMovesSelector from "./PokemonMovesSelector";
+
 export default function CaughtPokemon(props) {
-  // const [caught, setCaught] = useState(0);
-  // const catchPokemon = () => setCaught((count) => count + 1);
   const [caught, setCaught] = useState([]);
-  const pokedexPool = ["Spearow", "Ditto", "Butterfree", "Pikachu", "Eevee"];
-  const catchPokemon = () => {
+  const catchPokemon = (pokeName) => {
     setCaught((arr) => {
-      const randomIndex = Math.floor(Math.random() * pokedexPool.length);
-      return arr.concat(pokedexPool[randomIndex]);
+      setPokemonNameInput("");
+      return arr.concat(pokeName);
     });
   };
+
   const pokedexList = caught.map((pokedex, i) => (
     <li key={`pokedex${i}`}>{pokedex}</li>
   ));
+
+  const [pokemonNameInput, setPokemonNameInput] =
+    useState("");
+
+  function handleInputChange(e) {
+    setPokemonNameInput(e.target.value);
+  }
   return (
     <>
-      <PokemonMovesSelector />
       <p>
         Caught {caught.length} Pokemon on {props.date}
       </p>
-      <button onClick={catchPokemon}>Catch Pokemon</button>
+      <input
+        type="text"
+        name=""
+        id=""
+        value={pokemonNameInput}
+        onChange={handleInputChange}
+      />
+      <button
+        onClick={() => {
+          pokemonNameInput &&
+            catchPokemon(pokemonNameInput);
+        }}
+      >
+        Catch Pokemon
+      </button>
       <ul>{pokedexList}</ul>
     </>
   );
