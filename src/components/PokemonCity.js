@@ -6,7 +6,7 @@ function PokemonCity() {
     setCity(eventInput.target.value);
   }
   return (
-    <div>
+    <section>
       <input
         type="text"
         name="city"
@@ -16,7 +16,7 @@ function PokemonCity() {
         onChange={updateCity}
       />
       <p>Welcome to the city of {city}</p>
-    </div>
+    </section>
   );
 }
 

@@ -19,7 +19,7 @@ export default function PokemonMovesSelector() {
     margin: "10px",
   };
   return (
-    <div>
+    <section>
       <button style={style} onClick={handleBulbasaurClick}>
         Fetch Bulbasaur
       </button>
@@ -27,6 +27,6 @@ export default function PokemonMovesSelector() {
         Fetch Charmander
       </button>
       {id ? <PokemonMoves pokemonId={id} /> : null}
-    </div>
+    </section>
   );
 }

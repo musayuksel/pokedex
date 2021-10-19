@@ -11,25 +11,27 @@ function App() {
     console.log("THE LOGO CLICKED...");
   };
   return (
-    <div>
+    <>
       <Logo
         appName="Pokedex"
         handleClick={logWhenClicked}
       />
-      <BestPokemon
-        abilities={[
-          "Anticipation",
-          "Adaptability",
-          "Run-Away",
-          "new ability",
-        ]}
-      />
-      <PokemonMovesSelector />
-      <PokemonCity />
-      <CaughtPokemon
-        date={new Date().toLocaleDateString()}
-      />
-    </div>
+      <main>
+        <BestPokemon
+          abilities={[
+            "Anticipation",
+            "Adaptability",
+            "Run-Away",
+            "new ability",
+          ]}
+        />
+        <PokemonMovesSelector />
+        <PokemonCity />
+        <CaughtPokemon
+          date={new Date().toLocaleDateString()}
+        />
+      </main>
+    </>
   );
 }
 export default App;

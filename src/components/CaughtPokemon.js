@@ -20,8 +20,9 @@ export default function CaughtPokemon(props) {
   function handleInputChange(e) {
     setPokemonNameInput(e.target.value);
   }
+
   return (
-    <>
+    <section className="catchPokemonSection">
       <p>
         Caught {caught.length} Pokemon on {props.date}
       </p>
@@ -29,10 +30,12 @@ export default function CaughtPokemon(props) {
         type="text"
         name=""
         id=""
+        placeholder="pokemon name"
         value={pokemonNameInput}
         onChange={handleInputChange}
       />
       <button
+        className="catchPokemon"
         onClick={() => {
           pokemonNameInput &&
             catchPokemon(pokemonNameInput);
@@ -41,6 +44,6 @@ export default function CaughtPokemon(props) {
         Catch Pokemon
       </button>
       <ul>{pokedexList}</ul>
-    </>
+    </section>
   );
 }

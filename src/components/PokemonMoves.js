@@ -15,7 +15,7 @@ export default function PokemonMoves({ pokemonId }) {
     fetchData();
   }, [pokemonId]);
   return (
-    <div>
+    <section>
       {pokemonData ? (
         <>
           <img
@@ -35,6 +35,6 @@ export default function PokemonMoves({ pokemonId }) {
           </ul>{" "}
         </>
       ) : null}
-    </div>
+    </section>
   );
 }

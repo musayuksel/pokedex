@@ -11,7 +11,34 @@ footer {
 img {
   height: 250px;
 }
-.pokemon {
+.pokemon,
+section {
   border-radius: 10px;
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin: 1rem 0;
+  padding: 0.5rem;
+}
+
+.catchPokemon {
+  background-color: orange;
+  border-radius: 10px;
+  border: none;
+  cursor: pointer;
+  padding: 1rem;
+  margin: 10px;
+}
+input {
+  border: 1px solid #eee;
+  border-radius: 10px;
+  padding: 1rem;
+  outline: none;
+}
+input:focus {
+  outline: none;
+}
+.catchPokemonSection li {
+  list-style-type: none;
+  border-bottom: 1px solid #999999;
+  padding: 1rem 0rem 0.5rem;
+  width: 80%;
 }
